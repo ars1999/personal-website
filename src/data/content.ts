@@ -150,7 +150,7 @@ export const projects: Project[] = [
     image: "/images/projects/hand.png",
     description:
       "Designed a modular coupler interface that decouples actuators from manipulators in tendon-driven hands, cutting repair time from hours to minutes and enabling one actuator to drive multiple end effectors.",
-    detail: "test",
+    detail: dextrousRoboticArm,
   },
   {
     slug: "cryogenic-vaccine-storage",
