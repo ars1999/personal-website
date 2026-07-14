@@ -139,7 +139,7 @@ export const projects: Project[] = [
     image: "/images/projects/biopsy.png",
     description:
       "Low-cost robotic system for precise needle insertion, using computer vision to achieve ±0.5 mm lesion localization.",
-    links: [{ label: "GitHub", url: "https://github.com/Team3-16778" }],
+    links: [{ label: "GitHub", url: "https://github.com/Team3-16778" },{label: "Project Website", url: "https://team3-16778.github.io/#/"},{label: "Project Video", url: "https://youtu.be/UW7k7Gw-k7s"}],
     detail: roboticBiopsy,
   },
   {
@@ -151,15 +151,7 @@ export const projects: Project[] = [
       "Portable cryogenic system keeping vaccines at −70°C for 12+ hours in transit, validated with MATLAB and ANSYS.",
     detail: cryogenicVaccineStorage,
   },
-  {
-    slug: "orthoses",
-    title: "Design of Upper and Lower Limb Orthoses",
-    subtitle: "Product development project, Cre-Aid Labs",
-    image: "/images/projects/orthoses.jpg",
-    description:
-      "Customizable 3D-printed orthotic splints in heat-malleable PLA, validated through patient and practitioner trials.",
-    detail: orthosesWriteup,
-  },
+ 
   {
     slug: "prosthetic-hand",
     title: "Development of Transradial Prosthetic Hand",
@@ -168,6 +160,16 @@ export const projects: Project[] = [
     description:
       "Low-cost (<$50), 140 g body-powered prosthetic hand with Whipple-tree finger control and a custom 3D-printed socket.",
     detail: prostheticHand,
+  },
+  
+   {
+    slug: "orthoses",
+    title: "Design of Upper and Lower Limb Orthoses",
+    subtitle: "Product development project, Cre-Aid Labs",
+    image: "/images/projects/ortho.png",
+    description:
+      "Customizable 3D-printed orthotic splints in heat-malleable PLA, validated through patient and practitioner trials.",
+    detail: orthosesWriteup,
   },
   {
     slug: "lmo-batteries",
@@ -178,7 +180,6 @@ export const projects: Project[] = [
       "Coupled electrochemical simulation with additive manufacturing to compare 3D-structured, cobalt-free Li-ion electrodes in COMSOL.",
     detail: lmoBatteries,
   },
-  
   {
     slug: "dlfea-heart-valve",
     title: "Deep Learning-Enhanced FEA for Bioprosthetic Heart Valves",
@@ -191,7 +192,7 @@ export const projects: Project[] = [
         label: "GitHub",
         url: "https://github.com/Da-aru/Deep-Learning-Enhanced-Finite-Element-Analysis-for-Bioprosthetic-Heart-Valve",
       },
-      { label: "Project Video", url: "https://www.youtube.com/watch?v=QRPEZg2OpZo" },
+      { label: "Project Video", url: "https://www.youtube.com/watch?v=QRPEZg2OpZo" }, { label: "Project Report", url: "https://drive.google.com/file/d/1Qmbnu70hFqMDSnJXhrfVR4vHvgJgbnUE/view?usp=sharing" }
     ],
     detail: dlfeaHeartValve,
   },
@@ -202,7 +203,7 @@ export const projects: Project[] = [
     image: "/images/projects/immersion-cooling.jpg",
     description:
       "Python/MATLAB Navier-Stokes solver for immersion-cooled battery packs, cutting temperature variation by 20%.",
-    links: [{ label: "GitHub", url: "https://github.com/Da-aru/CFD-BTMS" }],
+    links: [{ label: "GitHub", url: "https://github.com/Da-aru/CFD-BTMS" }, { label: "Project Report", url: "https://drive.google.com/file/d/1BLNYH_0vXInAiqeZNMVUvy01xkOBghXy/view?usp=sharing" }], //
     detail: immersionCoolingCfd,
   },
   {

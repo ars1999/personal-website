@@ -1,4 +1,5 @@
 ## Introduction
+![Annotated robotic biopsy system, showing the gantry, end-effector, power, camera, and computing subsystems](/images/projects/stone.png)
 
 This project focused on addressing solid inclusion defects in flat glass manufacturing, specifically alumino-silicate nature defects such as spinel, corundum, cristobalite, and wollastonite. These defects significantly impact product quality and yield. By studying the intrinsic petrographic properties of these inclusions through thin sectioning and microscopic analysis, the project aimed to identify their sources and develop strategies for defect reduction.
 
@@ -10,5 +11,5 @@ This project focused on addressing solid inclusion defects in flat glass manufac
 
 ## Results
 
-- **Yield Improvement** — A comprehensive understanding of the defects and their sources led to a 2% reduction in defect losses.
+- **Yield Improvement** — A comprehensive understanding of the defects and their sources led to a 15 tons / day in defect losses.
 - **Process Insights** — Defects were plotted across the width of the glass ribbon, revealing contamination patterns and enabling targeted investigations.

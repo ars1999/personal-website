@@ -8,10 +8,13 @@ The project aims to develop a low-cost, portable robotic system for automated ne
 
 **System architecture** — The robot is built from five integrated subsystems working together for autonomous needle insertion: a gantry system for coarse positioning, an end-effector system for needle actuation, a power system, a camera system for real-time target localization, and a computing system tying vision, control, and actuation together.
 
+![Annotated robotic biopsy system, showing the gantry, end-effector, power, camera, and computing subsystems](/images/projects/RobotBiopsyMethod.png)
+
 ## Results
 
 - **High Precision** — Achieved gantry positional accuracy of ±0.5 mm (95% accuracy) and angular actuator accuracy of 85%.
 - **Operational Efficiency** — Linear actuator positioning completed within 10 seconds, and gantry positioning within 15 seconds.
 - **Robust and Modular** — Modular gantry design ensures stable, repeatable performance, facilitating ease of maintenance and future upgrades.
 - **Real-Time Vision Integration** — Integrated computer vision successfully localized targets and dynamically adjusted needle insertion to simulated respiratory movements.
-- **Cost-Effective Design** — Delivered the complete robotic biopsy system under $1200, leveraging affordable components.
+- **Cost-Effective Design** — Delivered the complete robotic biopsy system under $1200, leveraging affordable components. 
+

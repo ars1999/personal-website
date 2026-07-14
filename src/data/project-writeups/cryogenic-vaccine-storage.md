@@ -8,8 +8,13 @@ Many regions globally lack reliable access to vaccines, especially due to logist
 - Performed detailed thermal analyses using MATLAB and ANSYS, evaluating steady-state and transient scenarios and modeling worst-case environmental conditions (42°C ambient, 1000 W/m² solar radiation, 6.5 m/s wind speeds).
 - Integrated thermal sensors and Starlink hardware for real-time temperature monitoring and active control.
 
-## Results
+![Annotated robotic biopsy system, showing the gantry, end-effector, power, camera, and computing subsystems](/images/projects/yy_edited.png)
 
+## Results
+![Annotated robotic biopsy system, showing the gantry, end-effector, power, camera, and computing subsystems](/images/projects/gfhr.png)
+
+![Annotated robotic biopsy system, showing the gantry, end-effector, power, camera, and computing subsystems](/images/projects/ggg.png)
 - Transient simulations showed effective temperature management through typical daily cycles.
 - Simulations guided the optimal configuration of vaccine shelves and precise fan placements, significantly improving internal airflow and cooling efficiency.
 - Thermal modeling validated that sublimating about 5.25 kg of dry ice over a 14-hour duration is sufficient and achievable.
+

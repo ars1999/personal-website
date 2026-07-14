@@ -3,6 +3,7 @@
 This project aimed to design a low-cost, body-powered prosthetic for individuals with below-the-elbow amputations. The prosthetic was developed to be lightweight, anthropomorphic, and highly functional, enabling users to perform various daily tasks efficiently.
 
 ## Methods
+![Annotated robotic biopsy system, showing the gantry, end-effector, power, camera, and computing subsystems](/images/projects/c1_converted.png)
 
 - **Design and modeling** — Created an anthropomorphic hand design using 3D modeling tools, incorporating a Whipple tree mechanism to allow selective control of individual fingers with a single actuation.
 - **Prototyping** — Used 3D printing to fabricate components, including the custom socket for a precise, comfortable fit, and assembled the prosthetic with lightweight materials to ensure affordability and usability.
@@ -10,6 +11,10 @@ This project aimed to design a low-cost, body-powered prosthetic for individuals
 - **Functional testing** — Evaluated grip types (precision and power grips) and thumb movements (abduction, adduction, flexion, extension, and opposable motion), and tested the prosthetic's ability to handle objects with adequate grip and friction using lined fingertips and flexible palm materials.
 
 ## Results
+
+<div class="video-embed">
+  <iframe src="https://www.youtube.com/embed/GqjuIIueXAA" title="Prosthetic Hand Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 - **Affordability** — Maintained a production cost below $50.
 - **Lightweight** — The final design achieved a weight of 140 grams for the end gripper.

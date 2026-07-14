@@ -10,6 +10,7 @@ This project aimed to design and develop customizable 3D-printed orthotic splint
 - **Evaluation** — Conducted user trials with patients and medical practitioners to assess fit, comfort, and functionality.
 
 ## Results
+![Annotated robotic biopsy system, showing the gantry, end-effector, power, camera, and computing subsystems](/images/projects/orth.png)
 
 - The project successfully delivered high-quality 3D-printed orthotic splints tailored to individual patient anatomies for optimal comfort and fit.
 - Polylactic Acid (PLA) was utilized for its lightweight, durable, and heat-malleable properties, enabling easy customization for patient-specific adjustments. The breathable, ergonomic designs were easy to wear and proved effective for medical applications.
