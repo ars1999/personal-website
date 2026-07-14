@@ -8,6 +8,7 @@ import immersionCoolingCfd from "./project-writeups/immersion-cooling-cfd.md?raw
 import meltPoolDiffusion from "./project-writeups/melt-pool-diffusion.md?raw";
 import orthosesWriteup from "./project-writeups/orthoses.md?raw";
 import prostheticHand from "./project-writeups/prosthetic-hand.md?raw";
+import dextrousRoboticArm from "./project-writeups/dextrous-robotic-arm.md?raw";
 
 export const person = {
   name: "Arushi Jain",
@@ -15,7 +16,7 @@ export const person = {
   email: "arushijain5899@gmail.com",
   phone: "+1-878-834-9397",
   linkedin: "https://www.linkedin.com/in/arushi--jain/",
-  resumeUrl: "/resume/Arushi_Jain_Resume.pdf",
+  resumeUrl: "https://drive.google.com/file/d/1emD9KYUu2IVGPG2hUOGmValF0ALRC8OW/view?usp=sharing",
   shortAbout: "Mechanical Engineer",
   bio: "I am Arushi Jain, a Mechanical Engineering graduate from Carnegie Mellon University with 3+ years of experience in manufacturing and product design. Passionate about integrating machine learning into hardware design, I strive to create innovative, accessible technologies that drive positive change.",
 };
@@ -141,6 +142,15 @@ export const projects: Project[] = [
       "Low-cost robotic system for precise needle insertion, using computer vision to achieve ±0.5 mm lesion localization.",
     links: [{ label: "GitHub", url: "https://github.com/Team3-16778" },{label: "Project Website", url: "https://team3-16778.github.io/#/"},{label: "Project Video", url: "https://youtu.be/UW7k7Gw-k7s"}],
     detail: roboticBiopsy,
+  },
+  {
+    slug: "dextrous-robotic-arm",
+    title: "Rethinking actuator design for dexterous end effectors",
+    subtitle: "Personal project",
+    image: "/images/projects/hand.png",
+    description:
+      "Designed a modular coupler interface that decouples actuators from manipulators in tendon-driven hands, cutting repair time from hours to minutes and enabling one actuator to drive multiple end effectors.",
+    detail: "test",
   },
   {
     slug: "cryogenic-vaccine-storage",
