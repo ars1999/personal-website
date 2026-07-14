@@ -16,8 +16,8 @@ export const person = {
   phone: "+1-878-834-9397",
   linkedin: "https://www.linkedin.com/in/arushi--jain/",
   resumeUrl: "/resume/Arushi_Jain_Resume.pdf",
-  shortAbout: "Mechanical Engineer blending hardware design with machine learning.",
-  bio: "I am Arushi Jain, a Mechanical Engineering graduate from Carnegie Mellon University with two years of experience in manufacturing and product design. Passionate about integrating machine learning into hardware design, I strive to create innovative, accessible technologies that drive positive change.",
+  shortAbout: "Mechanical Engineer",
+  bio: "I am Arushi Jain, a Mechanical Engineering graduate from Carnegie Mellon University with 3+ years of experience in manufacturing and product design. Passionate about integrating machine learning into hardware design, I strive to create innovative, accessible technologies that drive positive change.",
 };
 
 export const education = [
@@ -63,6 +63,28 @@ export const skillGroups = [
 ];
 
 export const experience = [
+  {
+    role: "Process Engineer",
+    org: "Conifer",
+    location: "Sunnyvale, CA, United States",
+    duration: "Dec 2026 – Present",
+    details: [
+      "Executed DFM of axial-flux stators via an in-house APG process and closed potting molds for high-volume encapsulation",
+      "Designed in-house tooling, including an abrasive enamel-removal machine and fixtures for coil winding & laser welding",
+      "Owned the laser welding process for stator components from parameter development through production scaling",
+    ],
+  },
+  {
+    role: "Founding Engineer - Mechanical",
+    org: "Futurhand Robotics",
+    location: "Pittsburgh, PA, United States",
+    duration: "Jul 2025 – Dec 2025",
+    details: [
+      "Led the MacBook program as DRI, conducting technical assessments, optimizing designs, driving improvements via DFMEA and DOE, and drafting detailed vendor drawings",
+      "Reduced flexible PCB connector load by 50.3% by implementing a kirigami-inspired compliance design in the PCB through analysis and simulation; developed design guidelines to ensure optimal performance and reliability",
+      "Designed and developed the Test Buck Assembly for battery testing in portable devices",
+    ],
+  },
   {
     role: "Product Design Intern – Battery Pack",
     org: "Apple",
@@ -116,36 +138,9 @@ export const projects: Project[] = [
     subtitle: "Mechatronics course project, Carnegie Mellon University",
     image: "/images/projects/biopsy.png",
     description:
-      "A low-cost, portable robotic system for precise, minimally invasive needle insertion. Leveraging computer vision, real-time motion control, and sensor feedback, it dynamically adjusts for patient movement, achieving ±0.5 mm lesion localization and reducing healthcare costs.",
+      "Low-cost robotic system for precise needle insertion, using computer vision to achieve ±0.5 mm lesion localization.",
     links: [{ label: "GitHub", url: "https://github.com/Team3-16778" }],
     detail: roboticBiopsy,
-  },
-  {
-    slug: "lmo-batteries",
-    title: "2D Simulation of LMO Batteries",
-    subtitle: "Research project, Panat Lab · Carnegie Mellon University",
-    image: "/images/projects/batteries.png",
-    description:
-      "Coupled electrochemical simulation with additive manufacturing to move toward 3D-structured, cobalt-free Li-ion electrodes — modeling porous electrode and concentrated species theory in COMSOL to compare 3D-structured hybrid electrodes against conventional planar designs.",
-    detail: lmoBatteries,
-  },
-  {
-    slug: "knots-defect-analysis",
-    title: "Knots: Defect Analysis in Soda-Lime Glass",
-    subtitle: "Yield improvement project, Saint-Gobain",
-    image: "/images/projects/knots.png",
-    description:
-      "Systematically traced and analyzed knot defects — off-composition glass encapsulated within soda-lime glass — using XRF spectroscopy and statistical process correlation, improving yield by 2% through composition analysis and process optimization.",
-    detail: knotsDefectAnalysis,
-  },
-  {
-    slug: "stones-defect-analysis",
-    title: "Stones: Defect Analysis in Soda-Lime Glass",
-    subtitle: "Yield improvement project, Saint-Gobain",
-    image: "/images/projects/stones.png",
-    description:
-      "Studied the petrographic properties of alumino-silicate solid inclusion defects (spinel, corundum, cristobalite, wollastonite) through thin sectioning and microscopy to trace sources and reduce defect-related yield losses.",
-    detail: stonesDefectAnalysis,
   },
   {
     slug: "cryogenic-vaccine-storage",
@@ -153,16 +148,44 @@ export const projects: Project[] = [
     subtitle: "Thermal Systems Analysis and Design course project, Carnegie Mellon University",
     image: "/images/projects/vaccine.png",
     description:
-      "A portable cryogenic cooling system maintaining vaccines at −70°C for at least 12 hours during aerial delivery to remote, flood-prone regions — combining vacuum insulation, dry-ice sublimation, and Peltier cooling validated with MATLAB and ANSYS thermal analysis.",
+      "Portable cryogenic system keeping vaccines at −70°C for 12+ hours in transit, validated with MATLAB and ANSYS.",
     detail: cryogenicVaccineStorage,
   },
+  {
+    slug: "orthoses",
+    title: "Design of Upper and Lower Limb Orthoses",
+    subtitle: "Product development project, Cre-Aid Labs",
+    image: "/images/projects/orthoses.jpg",
+    description:
+      "Customizable 3D-printed orthotic splints in heat-malleable PLA, validated through patient and practitioner trials.",
+    detail: orthosesWriteup,
+  },
+  {
+    slug: "prosthetic-hand",
+    title: "Development of Transradial Prosthetic Hand",
+    subtitle: "Product development project, Cre-Aid Labs",
+    image: "/images/projects/prosthetic.png",
+    description:
+      "Low-cost (<$50), 140 g body-powered prosthetic hand with Whipple-tree finger control and a custom 3D-printed socket.",
+    detail: prostheticHand,
+  },
+  {
+    slug: "lmo-batteries",
+    title: "2D Simulation of LMO Batteries",
+    subtitle: "Research project, Panat Lab · Carnegie Mellon University",
+    image: "/images/projects/batteries.png",
+    description:
+      "Coupled electrochemical simulation with additive manufacturing to compare 3D-structured, cobalt-free Li-ion electrodes in COMSOL.",
+    detail: lmoBatteries,
+  },
+  
   {
     slug: "dlfea-heart-valve",
     title: "Deep Learning-Enhanced FEA for Bioprosthetic Heart Valves",
     subtitle: "Deep Learning course project, Carnegie Mellon University",
-    image: "/images/projects/dlfea.png",
+    image: "/images/projects/dlfea.jpg",
     description:
-      "Integrated graph neural networks with finite element analysis to build fast surrogate models for bioprosthetic heart valve deformation, achieving R² = 0.96 with MeshGraphNets outperforming a 3D CNN baseline by 1.5%.",
+      "Graph neural network FEA surrogate for heart valve deformation, achieving R² = 0.96 vs. a 3D CNN baseline.",
     links: [
       {
         label: "GitHub",
@@ -178,7 +201,7 @@ export const projects: Project[] = [
     subtitle: "Computational Fluid Dynamics course project, Carnegie Mellon University",
     image: "/images/projects/immersion-cooling.jpg",
     description:
-      "Wrote a Python/MATLAB solver for the Navier-Stokes equations to model coolant flow in immersion-cooled battery packs, reducing temperature variation by 20% and eliminating hotspots through design and flow-rate optimization.",
+      "Python/MATLAB Navier-Stokes solver for immersion-cooled battery packs, cutting temperature variation by 20%.",
     links: [{ label: "GitHub", url: "https://github.com/Da-aru/CFD-BTMS" }],
     detail: immersionCoolingCfd,
   },
@@ -188,7 +211,7 @@ export const projects: Project[] = [
     subtitle: "Generative AI course project, Carnegie Mellon University",
     image: "/images/projects/melt-pool.png",
     description:
-      "A diffusion-based super-resolution model (ESRGAN encoder + DDPM refinement) that upscales low-resolution Laser Powder Bed Fusion melt-pool simulations, cutting computational time by 100x while preserving defect-relevant detail.",
+      "Diffusion super-resolution model upscaling LPBF melt-pool simulations, cutting compute time 100x with defect fidelity preserved.",
     links: [
       {
         label: "GitHub",
@@ -198,21 +221,22 @@ export const projects: Project[] = [
     detail: meltPoolDiffusion,
   },
   {
-    slug: "orthoses",
-    title: "Design of Upper and Lower Limb Orthoses",
-    subtitle: "Product development project, Cre-Aid Labs",
-    image: "/images/projects/orthoses.jpg",
+    slug: "knots-defect-analysis",
+    title: "Knots: Defect Analysis in Soda-Lime Glass",
+    subtitle: "Yield improvement project, Saint-Gobain",
+    image: "/images/projects/knots.png",
     description:
-      "Customizable 3D-printed orthotic splints — Thumb Spica, Toe Splint, and Stack Splint — designed in CAD and produced in heat-malleable PLA, validated through patient and practitioner trials for fit, comfort, and function.",
-    detail: orthosesWriteup,
+      "Traced knot defects in soda-lime glass via XRF spectroscopy and process correlation, improving yield by 2%.",
+    detail: knotsDefectAnalysis,
   },
   {
-    slug: "prosthetic-hand",
-    title: "Development of Transradial Prosthetic Hand",
-    subtitle: "Product development project, Cre-Aid Labs",
-    image: "/images/projects/prosthetic.png",
+    slug: "stones-defect-analysis",
+    title: "Stones: Defect Analysis in Soda-Lime Glass",
+    subtitle: "Yield improvement project, Saint-Gobain",
+    image: "/images/projects/stones.png",
     description:
-      "A low-cost (<$50), lightweight (140 g), body-powered prosthetic hand using a Whipple-tree mechanism for selective finger control, a rotatable wrist, and a custom 3D-printed socket for a precise, comfortable fit.",
-    detail: prostheticHand,
+      "Studied petrographic properties of solid inclusion defects via thin sectioning and microscopy to trace their source.",
+    detail: stonesDefectAnalysis,
   },
+  
 ];
