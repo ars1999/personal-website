@@ -1,0 +1,82 @@
+---
+import Button from "./Button.astro";
+import { person } from "../data/content";
+---
+
+<section id="home" class="section hero">
+    <div class="container hero-inner">
+        <img
+            src="/images/projects/profile.jpg"
+            alt={person.name}
+            class="hero-photo"
+        />
+        <h1 class="hero-greeting">Hi! I am Arushi.</h1>
+        <p class="hero-tagline">{person.shortAbout}</p>
+        <div class="hero-actions">
+            <Button href="#contact" variant="primary" icon="paper-plane"
+                >Say Hello</Button
+            >
+            <Button
+                href={`mailto:${person.email}`}
+                external
+                variant="brand"
+                size="icon"
+                icon="envelope"
+                iconPosition="left"
+                brandColor="var(--color-email)"
+                brandColorInverted="var(--color-email-inverted)"
+            />
+            <Button
+                href={person.linkedin}
+                external
+                variant="brand"
+                size="icon"
+                icon="linkedin"
+                iconPosition="left"
+                brandColor="var(--color-linkedin)"
+                brandColorInverted="var(--color-linkedin-inverted)"
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        padding-top: var(--header-height);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .hero-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: 1.25rem;
+    }
+    .hero-photo {
+        width: 19rem;
+        height: 19rem;
+        border-radius: 9999px;
+        object-fit: cover;
+        border: 3px solid var(--color-border);
+        box-shadow: 0 20px 60px -15px var(--shadow-color);
+        margin-bottom: 0.5rem;
+    }
+    .hero-greeting {
+        margin-bottom: -0.5rem;
+    }
+    .hero-tagline {
+        max-width: 32rem;
+        color: var(--color-secondary);
+        font-size: 1.05rem;
+    }
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 0.6rem;
+        margin-top: 0.5rem;
+    }
+</style>

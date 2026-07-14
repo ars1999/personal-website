@@ -1,0 +1,9 @@
+---
+import Section from "./Section.astro";
+import Timeline from "./Timeline.astro";
+import { education } from "../data/content";
+---
+
+<Section id="education" title="Education" eyebrow="- Where I've studied -">
+  <Timeline entries={education} />
+</Section>

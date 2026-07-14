@@ -1,0 +1,51 @@
+---
+import Icon from "./Icon.astro";
+
+interface Entry {
+  role?: string;
+  school?: string;
+  degree?: string;
+  org?: string;
+  location: string;
+  duration: string;
+  details: string[];
+}
+
+interface Props {
+  entries: Entry[];
+}
+const { entries } = Astro.props as Props;
+---
+
+<ul class="timeline-list">
+  {entries.map((entry, i) => (
+    <li class="timeline-entry">
+      <div class="timeline-handle">
+        <div class="timeline-dot"></div>
+        {i < entries.length - 1 && <div class="timeline-line"></div>}
+      </div>
+      <div class="timeline-body">
+        <h3>{entry.role ?? entry.degree}</h3>
+        <div class="timeline-meta">
+          <span class="timeline-org">
+            <Icon name="building" size="0.75rem" />
+            {entry.org ?? entry.school}
+          </span>
+          <span class="timeline-loc">
+            <Icon name="location" size="0.75rem" />
+            {entry.location}
+          </span>
+          <span class="timeline-duration">
+            <Icon name="calendar" size="0.75rem" />
+            {entry.duration}
+          </span>
+        </div>
+        <ul class="timeline-desc">
+          {entry.details.map((d) => (
+            <li>{d}</li>
+          ))}
+        </ul>
+      </div>
+    </li>
+  ))}
+</ul>

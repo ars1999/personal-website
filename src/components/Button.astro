@@ -1,0 +1,46 @@
+---
+import Icon from "./Icon.astro";
+
+interface Props {
+  href?: string;
+  variant?: "primary" | "secondary" | "tertiary" | "borderless" | "brand";
+  size?: "md" | "sm" | "icon" | "icon-sm";
+  icon?: Parameters<typeof Icon>[0]["name"];
+  iconPosition?: "left" | "right";
+  brandColor?: string;
+  brandColorInverted?: string;
+  external?: boolean;
+  class?: string;
+}
+
+const {
+  href,
+  variant = "borderless",
+  size = "md",
+  icon,
+  iconPosition = "right",
+  brandColor,
+  brandColorInverted,
+  external = false,
+  class: className = "",
+} = Astro.props;
+
+const Tag = href ? "a" : "button";
+const sizeClass =
+  size === "sm" ? "btn-sm" : size === "icon" ? "btn-icon" : size === "icon-sm" ? "btn-icon btn-sm" : "";
+const iconSize = size === "icon" || size === "icon-sm" ? "1.15rem" : "0.8rem";
+---
+
+<Tag
+  class={`btn btn-${variant} ${sizeClass} ${className}`}
+  href={href}
+  target={external ? "_blank" : undefined}
+  rel={external ? "noopener noreferrer" : undefined}
+  style={brandColor
+    ? `--brand-color: ${brandColor}; --brand-color-inverted: ${brandColorInverted ?? "#fff"};`
+    : undefined}
+>
+  {icon && iconPosition === "left" && <Icon name={icon} size={iconSize} />}
+  <slot />
+  {icon && iconPosition === "right" && <Icon name={icon} size={iconSize} />}
+</Tag>

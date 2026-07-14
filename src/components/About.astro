@@ -1,0 +1,25 @@
+---
+import Section from "./Section.astro";
+import Button from "./Button.astro";
+import { person } from "../data/content";
+---
+
+<Section id="about" title="About Me" eyebrow="- My Introduction -">
+  <p class="about-text">{person.bio}</p>
+  <div class="about-actions">
+    <Button href={person.resumeUrl} external variant="primary" icon="file" iconPosition="left">Resume</Button>
+  </div>
+</Section>
+
+<style>
+  .about-text {
+    text-align: justify;
+    max-width: 46rem;
+    margin: 0 auto;
+  }
+  .about-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+</style>

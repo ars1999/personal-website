@@ -1,0 +1,37 @@
+---
+interface Props {
+  id: string;
+  title?: string;
+  eyebrow?: string;
+  fullHeight?: boolean;
+}
+const { id, title, eyebrow, fullHeight = false } = Astro.props;
+---
+
+<section id={id} class:list={["section", { "section-full-height": fullHeight }]}>
+  <div class="container section-inner">
+    {title && (
+      <div class="section-heading">
+        <h2>{title}</h2>
+        {eyebrow && <span>{eyebrow}</span>}
+      </div>
+    )}
+    <div class="section-contents">
+      <slot />
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-full-height {
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding-top: var(--header-height);
+    padding-bottom: 0;
+  }
+  .section-full-height .section-inner {
+    width: 100%;
+  }
+</style>

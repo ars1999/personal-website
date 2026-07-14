@@ -1,0 +1,86 @@
+---
+import Section from "./Section.astro";
+import Icon from "./Icon.astro";
+import { person } from "../data/content";
+---
+
+<Section id="contact" title="Contact Me" eyebrow="- Looking forward to hearing from you -" fullHeight>
+  <div class="contact-grid">
+    <a class="contact-card" href={`mailto:${person.email}`}>
+      <span class="contact-icon" style="--brand-color: var(--color-email);">
+        <Icon name="envelope" size="1.25rem" />
+      </span>
+      <span class="contact-label">Email</span>
+      <span class="contact-value">{person.email}</span>
+    </a>
+    <a class="contact-card" href={`tel:${person.phone}`}>
+      <span class="contact-icon" style="--brand-color: var(--color-phone);">
+        <Icon name="phone" size="1.25rem" />
+      </span>
+      <span class="contact-label">Phone</span>
+      <span class="contact-value">{person.phone}</span>
+    </a>
+    <a class="contact-card" href={person.linkedin} target="_blank" rel="noopener noreferrer">
+      <span class="contact-icon" style="--brand-color: var(--color-linkedin);">
+        <Icon name="linkedin" size="1.25rem" />
+      </span>
+      <span class="contact-label">LinkedIn</span>
+      <span class="contact-value">arushi--jain</span>
+    </a>
+  </div>
+</Section>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 54rem;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  @media (min-width: 768px) {
+    .contact-grid {
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    }
+  }
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5rem;
+    min-width: 16rem;
+    padding: 1.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1.2rem;
+    text-align: center;
+    box-shadow: 0 0 20px var(--shadow-color);
+  }
+  .contact-card:hover {
+    box-shadow: 0 16px 40px -12px var(--brand-color, var(--shadow-color));
+    transform: translateY(-3px);
+    border-color: transparent;
+  }
+  .contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 9999px;
+    background-color: color-mix(in srgb, var(--brand-color) 15%, transparent);
+    color: var(--brand-color);
+    fill: var(--brand-color);
+  }
+  .contact-label {
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+  .contact-value {
+    color: var(--color-secondary);
+    font-size: 0.88rem;
+    word-break: break-word;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  }
+</style>

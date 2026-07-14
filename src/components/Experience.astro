@@ -1,0 +1,9 @@
+---
+import Section from "./Section.astro";
+import Timeline from "./Timeline.astro";
+import { experience } from "../data/content";
+---
+
+<Section id="experience" title="Experience" eyebrow="- My work experience in the industry -">
+  <Timeline entries={experience} />
+</Section>

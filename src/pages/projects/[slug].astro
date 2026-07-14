@@ -1,0 +1,152 @@
+---
+import { marked } from "marked";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Button from "../../components/Button.astro";
+import { projects } from "../../data/content";
+
+export function getStaticPaths() {
+    return projects.map((project) => ({
+        params: { slug: project.slug },
+        props: { project },
+    }));
+}
+
+const { project } = Astro.props;
+const detailHtml = marked.parse(project.detail, { async: false }) as string;
+---
+
+<Layout title={`${project.title} — Arushi Jain`}>
+    <Header />
+    <main class="detail-page">
+        <div class="container detail-container">
+            <Button href="/#projects" variant="borderless" size="sm" icon="arrow-left" iconPosition="left" class="back-link">
+                Back to Projects
+            </Button>
+
+            <h1>{project.title}</h1>
+            <p class="detail-subtitle">{project.subtitle}</p>
+
+            <div class="markdown-body" set:html={detailHtml} />
+
+            {
+                project.links && project.links.length > 0 && (
+                    <section class="detail-block">
+                        <h2>References and Resources</h2>
+                        <div class="detail-links">
+                            {project.links.map((link) => (
+                                <Button
+                                    href={link.url}
+                                    external
+                                    variant="tertiary"
+                                    icon="external-link"
+                                >
+                                    {link.label}
+                                </Button>
+                            ))}
+                        </div>
+                    </section>
+                )
+            }
+
+            <Button href="/#projects" variant="secondary" icon="arrow-left" iconPosition="left" class="back-link-bottom">
+                Back to Projects
+            </Button>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .detail-page {
+        padding-top: calc(var(--header-height) + 3rem);
+        padding-bottom: 5rem;
+        min-height: 100vh;
+    }
+    .detail-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+    :global(.back-link) {
+        align-self: flex-start;
+        margin-bottom: 0.5rem;
+    }
+    .detail-subtitle {
+        color: var(--color-accent);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        font-size: 0.85rem;
+        margin-top: -1rem;
+    }
+    .detail-block {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.75rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--color-border);
+    }
+    .markdown-body {
+        display: flex;
+        flex-direction: column;
+        /*max-width: 52rem;*/
+    }
+    .markdown-body :global(h2) {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--color-border);
+    }
+    .markdown-body :global(h2:first-child) {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+    }
+    .markdown-body :global(h3) {
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+    .markdown-body :global(p) {
+        text-align: justify;
+        color: var(--color-secondary);
+        margin-top: 0.75rem;
+    }
+    .markdown-body :global(ul) {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.6rem;
+        margin-top: 0.75rem;
+        padding-left: 1.2rem;
+    }
+    .markdown-body :global(li) {
+        text-align: justify;
+        color: var(--color-secondary);
+    }
+    .markdown-body :global(li::marker) {
+        color: var(--color-accent);
+    }
+    .markdown-body :global(strong) {
+        color: var(--color-primary);
+        font-weight: 600;
+    }
+    .markdown-body :global(a) {
+        color: var(--color-accent);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+    .markdown-body :global(img) {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+        border: 1px solid var(--color-border);
+        margin-top: 1rem;
+    }
+    .detail-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+    :global(.back-link-bottom) {
+        align-self: center;
+        margin-top: 1.5rem;
+    }
+</style>
