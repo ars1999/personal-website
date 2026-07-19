@@ -12,12 +12,12 @@ import dextrousRoboticArm from "./project-writeups/dextrous-robotic-arm.md?raw";
 
 export const person = {
   name: "Arushi Jain",
-  title: "Mechanical Engineer",
+  title: "Mechanical Engineer from Carnegie Mellon University",
   email: "arushijain5899@gmail.com",
   phone: "+1-878-834-9397",
   linkedin: "https://www.linkedin.com/in/arushi--jain/",
   resumeUrl: "https://drive.google.com/file/d/1emD9KYUu2IVGPG2hUOGmValF0ALRC8OW/view?usp=sharing",
-  shortAbout: "Mechanical Engineer",
+  shortAbout: "Mechanical Engineer from Carnegie Mellon University",
   bio: "I am Arushi Jain, a Mechanical Engineering graduate from Carnegie Mellon University with 3+ years of experience in manufacturing and product design. Passionate about integrating machine learning into hardware design, I strive to create innovative, accessible technologies that drive positive change.",
 };
 
